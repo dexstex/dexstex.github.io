@@ -24,3 +24,7 @@ body {
     align-items: center;
     justify-content: space-around;
 }
+
+.intro {
+    font-family: 'Wix Madefor Display', sans-serif;
+}
