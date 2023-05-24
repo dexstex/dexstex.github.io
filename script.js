@@ -45,13 +45,13 @@ document.addEventListener("DOMContentLoaded", function() { // On DOM Load initia
     }
 });
 
-const height = $(window).height();
-const scrollTop = $(window).scrollTop();
+// const height = $(window).height();
+// const scrollTop = $(window).scrollTop();
 
-$(window).scroll(function() {
-  var scroll = $(window).scrollTop();
-  if (scroll > 400)
-    $('nav').addClass('nav-color');
-  else
-    $('nav').removeClass('nav-color');
-});
+// $(window).scroll(function() {
+//   var scroll = $(window).scrollTop();
+//   if (scroll > 400)
+//     $('').addClass('nav-color');
+//   else
+//     $('nav').removeClass('nav-color');
+// });

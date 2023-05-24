@@ -35,8 +35,8 @@
 
   /* css part */
 body {
+    background-color: rgb(2, 2, 2);
     margin: 0;
-    background-color: #020202;
     height: 300vh;
     color: hsla(0, 0%, 100%, 0.85);
     font-family: 'Wix Maderfor Display', sans-serif;
@@ -130,7 +130,7 @@ a, a:visited, a:active {
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   cursor: pointer;
   display: flex;
@@ -146,6 +146,12 @@ a, a:visited, a:active {
     font-weight: 400;
     margin: 0px;
   }
+
+#card-intro {
+    margin-bottom: 5vh;
+    font-family: 'Wix Madefor Display', sans-serif;
+    font-size: 2em;
+}
 
 #cards {
     display: flex;
