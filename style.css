@@ -1,6 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@500&display=swap');
 
+/* css properties */
+@property --featuresX {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 40%;
+}
+
+@property --featuresY {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 20%;
+}
+
 /* css animations*/
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes slidein {
     from {
         transform: translateY(-60px);
@@ -39,6 +60,8 @@ html {
 }
 
 body {
+    animation: fadeOut 0.6s linear 0.5s 1 normal both;
+    opacity: 0;
     background-color: rgb(2, 2, 2);
     margin: 0;
     height: 300vh;
@@ -49,9 +72,10 @@ body {
 }
 
 /* start of header */
+
 .header {
+  position: fixed;
     backdrop-filter: blur(5px);
-    position: fixed;
     width: 100%;
     height: 5vh;
     margin: 0;
@@ -59,6 +83,8 @@ body {
     grid-template-columns: 5% 45%;
     font-family: 'Wix Madefor Display', sans-serif;
     top: 0;
+    border-bottom: rgba(255, 255, 255, 0.5) 1px solid;
+    z-index: 69;
 }
 
 .top-selections {
@@ -90,7 +116,7 @@ a, a:visited, a:active {
 /* start of intro */
 
 .intro {
-    animation: slidein 1s ease-out 0s 1 normal both;
+    animation: slidein 1s ease-out 1s 1 normal both;
     height: 80vh;
     margin: 0;
     color: hsla(0, 0%, 100%, 0.85);
@@ -109,28 +135,36 @@ a, a:visited, a:active {
   }
 
 #bold-intro {
-    animation: slideinOpposite 1s ease-out 0s 1 normal both;
+    pointer-events: none;
+    animation: slideinOpposite 1s ease-out 1s 1 normal both;
     font-family: 'Wix Madefor Display', sans-serif;
     font-weight: 900;
     font-size: 5em;
 }
 
 #unbold-intro {
-    /* margin-top: 1vh; */
+    margin-top: 1vh;
     font-family: 'Wix Madefor Display', sans-serif;
     font-weight: 500;
     font-size: 2em;
     margin-bottom: 20vh;
+    height: 40px;
 }
 /* end of intro */
 
 /* start of main content */
 .main {
+  transition: --featuresX 2s, --featuresY 2s;
     padding: 30vh 5vh 40vh 5vh;
-    background: radial-gradient(ellipse 80% 40% at 50% 50%,rgba(120,119,198,0.3),rgba(0,0,0,0));
+    background: radial-gradient(ellipse var(--featuresX) var(--featuresY) at 50% 50%,rgba(120,119,198,0.3),rgba(0,0,0,0));
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.main.point {
+  --featuresX: 80%;
+  --featuresY: 40%;
 }
 
 .card {
@@ -256,9 +290,16 @@ a, a:visited, a:active {
     top: 90%;
     left: 50%;
     transform: translateX(-50%);
+    transition: 0.2s linear;
 }
 
-
+#boo {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    z-index: 10000;
+}
 
   /* responsiveness */
   

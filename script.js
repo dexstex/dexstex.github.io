@@ -22,7 +22,7 @@ function typeWriter() {
 }
 
 document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-    if(txt.length) setTimeout(typeWriter, 500);
+    if(txt.length) setTimeout(typeWriter, 1500);
   });
 
   document.getElementById("cards").onmousemove = e => {
@@ -38,20 +38,19 @@ document.addEventListener("DOMContentLoaded", function() { // On DOM Load initia
 
   $(window).bind('scroll', function() {
     if ($(window).scrollTop() > 20) {
-        $('#scrolldown').hide();
+        $('#scrolldown').css({"opacity": "0"});
     }
     else {
-        $('#scrolldown').show();
+        $('#scrolldown').css({"opacity": "1"})
+    }
+
+    if ($(window).scrollTop() > 50) {
+      $('.main').addClass("point");
+    }
+    else if ($(window).scrollTop() > 500) {
+      $('.main').removeClass("point");
+    }
+    else {
+      $('.main').removeClass("point");
     }
 });
-
-// const height = $(window).height();
-// const scrollTop = $(window).scrollTop();
-
-// $(window).scroll(function() {
-//   var scroll = $(window).scrollTop();
-//   if (scroll > 400)
-//     $('').addClass('nav-color');
-//   else
-//     $('nav').removeClass('nav-color');
-// });
