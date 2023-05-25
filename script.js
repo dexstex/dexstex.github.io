@@ -22,7 +22,7 @@ function typeWriter() {
 }
 
 document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-    if(txt.length) setTimeout(typeWriter, 1500);
+    if(txt.length) setTimeout(typeWriter, 2500);
   });
 
   document.getElementById("cards").onmousemove = e => {
