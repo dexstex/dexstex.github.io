@@ -4,32 +4,34 @@
 	<head>
 		<link rel="stylesheet" href="style.css">
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+		<!-- <script src="https://kit.fontawesome.com/2c0ca01969.js" crossorigin="anonymous"></script> -->
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Coming Soon</title>
 	</head>
 	<body>
-		<div class="header">
-			<div class="text-title"><a href="/"><span class="material-symbols-outlined">home</span></a></div>
+		<section class="header">
+			<div class="text-title"><a href="/"><i class="fa-solid fa-house"></i></a></div>
 			<div class="top-selections">
 				<div id="about-me"><a class="options" href="/aboutme.html">About Me</a></div>
 				<div id="goodies"><a class="options" href="/goodies.html">Useful Box</a></div>
 				<div id="guides"><a class="options" href="/guides.html">Guides</a></div>
 			</div>
-		</div>
-		<div class="intro">
+		</section>
+		<section class="intro">
 			<div id="bold-intro">Hi, I am Dexstex.</div>
 			<div id="unbold-intro"></div>
-		</div>
-		<div id="scrolldown"><span class="material-symbols-outlined">keyboard_double_arrow_down</span></div>
-		<div class="main">
+		</section>
+		<div id="scrolldown"><i class="fa-solid fa-angles-down"></i></div>
+		<section class="main">
 			<div id="card-intro">Here's something you gotta know about me</div>
 			<div id="cards">
 				<div class="card">
 				  	<div class="card-content">
+						<div class="card-image">
+							<i class="fa-solid fa-gamepad"></i>
+						</div>
 						<div class="card-info-wrapper">
 							<div class="card-info">
 								<div class="card-info-title">
@@ -43,6 +45,9 @@
 				</div>
 				<div class="card">
 					<div class="card-content">
+						<div class="card-image">
+							<i class="fa-solid fa-file-circle-exclamation"></i>
+						</div>
 						<div class="card-info-wrapper">
 							<div class="card-info">
 								<div class="card-info-title">
@@ -56,58 +61,79 @@
 			  </div>
 				<div class="card">
 					<div class="card-content">
+						<div class="card-image">
+							<i class="fa-solid fa-code"></i>
+						</div>
 					  <div class="card-info-wrapper">
 						  <div class="card-info">
 							  <div class="card-info-title">
 									<h3>Amateur Coder</h3>  
 									<h4>Somehow I managed to code this. hmm...</h4>
 							  </div>
-							  <div class="context"></div>
 						  </div>
 					  </div>
 					</div>
 			  </div>
 				<div class="card">
 					<div class="card-content">
+						<div class="card-image">
+							<i class="fa-solid fa-award"></i>
+						</div>
 					  <div class="card-info-wrapper">
 						  <div class="card-info">
 							  <div class="card-info-title">
 									<h3>Certified Failure</h3>  
 									<h4>1st at being an Asian Failure.</h4>
 							  </div>
-							  <div class="context"></div>
 						  </div>
 					  </div>
 					</div>
 			  </div>
 				<div class="card">
 					<div class="card-content">
+						<div class="card-image">
+							<i class="fa-solid fa-circle-question"></i>
+						</div>
 					  <div class="card-info-wrapper">
 						  <div class="card-info">
 							  <div class="card-info-title">
 									<h3>Server Tech Support</h3>  
 									<h4>I am not your personal tech support, so I dont do tech supports in DMs.</h4>
 							  </div>
-							  <div class="context"></div>
 						  </div>
 					  </div>
 					</div>
 			  </div>
 				<div class="card">
 					<div class="card-content">
+						<div class="card-image">
+							<i class="fa-solid fa-tree"></i>
+						</div>
 					  <div class="card-info-wrapper">
 						  <div class="card-info">
 							  <div class="card-info-title">
 									<h3>Grass Enjoyer</h3>  
 									<h4>I like grass but I'm not vegan enough to eat that.</h4>
-							  </div>
-							  <div class="context"></div>	
+							  </div>	
 						  </div>
 					  </div>
 					</div>
 			  </div>
-		</div>
-		<div class="footer"></div>
+		</section>
+		<section class="footer">
+				<div class="text">
+					<div id="name">Dexstex</div>
+					<div id="copyright">Not copyrighted @ 2023 Dexstex</div>
+				</div>
+				<div class="links">
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/aboutme.html">About Me</a></li>
+						<li><a href="/guides.html">Guides</a></li>
+						<li><a href="/goodies.html">Useful Box</a></li>
+					</ul>
+				</div>
+		</section>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src="script.js"></script>
 	</body>
