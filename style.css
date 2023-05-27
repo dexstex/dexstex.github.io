@@ -349,6 +349,26 @@ i {
   }
 
 /* end of main */
+/* start of footer */
+.footer {
+  padding: 0 3em 1em 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.links {
+  vertical-align: baseline;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  list-style: none;
+  justify-content: space-evenly;
+}
 
 /* misc */
 #scrolldown {
