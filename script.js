@@ -36,6 +36,12 @@ document.addEventListener("DOMContentLoaded", function() { // On DOM Load initia
     };
   }
 
+  history.scrollRestoration = "manual";
+
+  $(window).on('beforeunload', function(){
+    $(window).scrollTop(0);
+  });
+
   $(window).bind('scroll', function() {
     if ($(window).scrollTop() > 20) {
         $('#scrolldown').css({"opacity": "0"});
