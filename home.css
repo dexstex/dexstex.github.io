@@ -1,0 +1,25 @@
+/* Variables */
+:root {
+    --header-height : 48px;
+    --page-padding-left : max(env(safe-area-inset-left), 48px);
+    --page-padding-right : max(env(safe-area-inset-right), 48px);
+    --page-max-width : 1200px;
+}
+
+/* Body */
+
+#main {
+    padding-top: var(--header-height);
+    min-height: 100vh;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
+#intro {
+    margin-top: calc(-1 * var(--header-height));
+    padding-top: var(--header-height);
+    padding-left: var(--page-padding-left);
+    padding-right: var(--page-padding-right);
+    background: radial-gradient(ellipse 80% 50% at 50% -20%,rgba(120,119,198,0.3),rgba(0, 0, 0, 0));
+}

@@ -1,5 +1,16 @@
-/* Variables */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
 
+/* Variables */
+:root {
+    --page-padding-left : max(env(safe-area-inset-left), 48px);
+    --page-padding-right : max(env(safe-area-inset-right), 48px);
+    --page-max-width : 1200px;
+}
+
+::selection {
+    background:rgb(79, 82, 180);
+    color: rgb(208, 214, 224);
+}
 
 /* Animations */
 
@@ -7,8 +18,103 @@
 /* Body */
 
 html, body {
+    margin: 0;
     color-scheme: dark;
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    color: rgb(247, 248, 248);
+    scroll-behavior: smooth;
 }
 
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    text-size-adjust: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+header {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    height: 48px;
+    width: 100%;
+    z-index: 55;
+    margin: 0;
+}
+
+.yourheadla::before ,.yourheadla::after {
+    content: "";
+    position: absolute;
+    inset: -1px 0px -50px 0px;
+    pointer-events: none;
+    user-select: none;
+    -webkit-mask-image: linear-gradient(to bottom,black 48px,transparent);
+    mask-image: linear-gradient(to bottom,black 48px,transparent);
+}
+
+.yourheadla::before {
+    backdrop-filter: blur(12px);
+}
+
+
+#headcontent {
+    display: flex;
+    position: relative;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-left: var(--page-padding-left);
+    padding-right: var(--page-padding-right);
+    max-width: var(--page-max-width);
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+#headcontent::after {
+    content: "";
+    margin-left: var(--page-padding-left);
+    margin-right: var(--page-padding-right);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.headselect {
+    margin-left: 24px;
+    font-size: 14px;
+    color: rgb(247, 248, 248);
+    transition: color 0.25s;
+    height: 48px;
+}
+
+.headselect:hover {
+    color: rgb(138, 143, 152);
+}
+
+.no-headpat {
+    margin: 0;
+}
+
+#main {
+    padding-top: var(--header-height);
+    min-height: 100vh;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
 /* Responsiveness */
