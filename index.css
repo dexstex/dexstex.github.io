@@ -12,11 +12,6 @@
     color: rgb(208, 214, 224);
 }
 
-/* Animations */
-
-
-/* Body */
-
 html, body {
     margin: 0;
     color-scheme: dark;
@@ -36,9 +31,10 @@ ul {
     list-style-type: none;
 }
 
-a {
-    cursor: pointer;
+a, a:link, a:visited {
+    color: rgb(247, 248, 248);
     text-decoration: none;
+    cursor: pointer;
 }
 
 header {
@@ -57,7 +53,7 @@ header {
 .yourheadla::before ,.yourheadla::after {
     content: "";
     position: absolute;
-    inset: -1px 0px -50px 0px;
+    inset: -1px 0px -50% 0px;
     pointer-events: none;
     user-select: none;
     -webkit-mask-image: linear-gradient(to bottom,black 48px,transparent);
@@ -110,6 +106,7 @@ header {
     margin: 0;
 }
 
+
 #main {
     padding-top: var(--header-height);
     min-height: 100vh;
@@ -117,4 +114,36 @@ header {
     flex: 1 1 auto;
     flex-direction: column;
 }
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 48px;
+    color: rgb(247, 248, 248);
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.footselect a {
+    color: rgb(247, 248, 248);
+    transition: color 0.25s;
+}
+
+.footselect a:hover {
+    color: rgb(138, 143, 152);
+}
+
 /* Responsiveness */
+
