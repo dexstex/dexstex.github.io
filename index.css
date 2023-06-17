@@ -76,6 +76,7 @@ header {
     width: 100%;
     margin: 0 auto;
     height: 100%;
+    /* flex-direction: row; */
 }
 
 #headcontent::after {
@@ -147,3 +148,20 @@ footer::before {
 
 /* Responsiveness */
 
+@media only screen and (max-width: 450px) {
+    footer {
+        flex-direction: column;
+    }
+
+    #footerlinks {
+        display: flex;
+        align-items: center;
+        padding-left: var(--page-padding-left);
+        padding-right: var(--page-padding-right);
+        flex-direction: row;
+    }
+
+    #footerlinks li {
+        margin-left: 24px;
+    }
+}
