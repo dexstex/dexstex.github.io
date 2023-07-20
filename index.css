@@ -5,6 +5,23 @@
     --page-padding-left : max(env(safe-area-inset-left), 48px);
     --page-padding-right : max(env(safe-area-inset-right), 48px);
     --page-max-width : 1200px;
+    --funnynumberpro : 69420px;
+}
+
+.idle {
+    border: 4px solid #faa61a;
+}
+
+.online {
+    border: 4px solid #43b581;
+}
+
+.dnd {
+    border: 4px solid #f04747;
+}
+
+.offline {
+    border: 4px solid #747f8d;
 }
 
 ::selection {
@@ -27,6 +44,11 @@ body {
     text-size-adjust: none;
 }
 
+ul, ol, li, a, p, div, h1 ,h2 ,h3, h4, h5, h6, span, strong {
+    padding: 0;
+    margin: 0;
+}
+
 ul {
     list-style-type: none;
 }
@@ -36,6 +58,8 @@ a, a:link, a:visited {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Body */
 
 header {
     top: 0px;
@@ -63,7 +87,6 @@ header {
 .yourheadla::before {
     backdrop-filter: blur(12px);
 }
-
 
 #headcontent {
     display: flex;
@@ -107,7 +130,6 @@ header {
     margin: 0;
 }
 
-
 #main {
     padding-top: var(--header-height);
     min-height: 100vh;
@@ -137,31 +159,50 @@ footer::before {
     background: rgba(255, 255, 255, 0.1);
 }
 
-.footselect a {
-    color: rgb(247, 248, 248);
-    transition: color 0.25s;
+.discord {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: var(--page-padding-left);
+    padding-right: var(--page-padding-right);
 }
 
-.footselect a:hover {
-    color: rgb(138, 143, 152);
+#profile {
+    padding-right: 48px;
+}
+
+#userinfo img {
+    width: 88px;
+    height: 88px;
+    aspect-ratio: 1/1;
+    border-radius: var(--funnynumberpro);
+}
+
+#name {
+    padding-top: 16px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+#statuscontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+#activities {
+    display: flex;
+}
+
+.act-icon {
+    height: 64px;
+    width: 64px;
+    aspect-ratio: 1 / 1 ;
 }
 
 /* Responsiveness */
 
-@media only screen and (max-width: 450px) {
-    footer {
-        flex-direction: column;
-    }
-
-    #footerlinks {
-        display: flex;
-        align-items: center;
-        padding-left: var(--page-padding-left);
-        padding-right: var(--page-padding-right);
-        flex-direction: row;
-    }
-
-    #footerlinks li {
-        margin-left: 24px;
-    }
-}

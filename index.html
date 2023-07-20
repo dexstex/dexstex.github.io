@@ -16,11 +16,13 @@
 	<meta property="twitter:image" content="https://dexstex.github.io/media/meta.png" />
 	<link rel="stylesheet" href="index.css">
 	<link rel="stylesheet" href="home.css">
+	<script src="init.js"></script>
+	<script src="lanyard.js"></script>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body onload="onload()">
 	<header>
 		<div class="yourheadla"></div>
 		<ul id="headcontent">
@@ -47,7 +49,7 @@
 				</div>
 				<div id="whoami">
 					<div id="introstatus"></div>
-					<p>A 14 year old that is terrible at coding and a mathematics nerd at school.</p>
+					<p>A 14 year old that is terrible at life.</p>
 				</div>
 			</div>	
 
@@ -71,7 +73,39 @@
 		</div>
 	</section>
 	<footer>
-		<!-- pls add discord status here -->
+		<div class="discord">
+			<div id="profile">
+				<div id="userinfo">
+					<img id="avatar" draggable="false" alt="">
+					<div class="profilecontainer">
+						<p id="name"></p>
+						<div id="statuscontainer">
+							<div id="statusemoji"></div>
+							<p id="status"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="activities">
+			</div>
+		</div>
 	</footer>
+	<script>
+		// loop to constantly update the details of the activities even if no change was made (for example, time elapsed)
+		var i = 1;
+
+		function loop() {
+			setTimeout(function() {
+				updatepresence();
+				
+				i++;
+				if (i < 99999) {
+					loop();
+
+			}}, 500)
+		}
+
+		loop();
+	</script>
 </body>
 </html>
