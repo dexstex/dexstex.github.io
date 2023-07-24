@@ -1,4 +1,5 @@
 // values to change for the height of the activities rectangle
+// remember to update ul li for spotifystart/end
 var originalh = -0.2;
 var addedh = 5;
 
@@ -37,8 +38,6 @@ async function init(data) {
                 
                 var spotifystart = json.spotify.timestamps['start'];
                 var spotifyend = json.spotify.timestamps['end'];
-                console.log(spotifystart);
-                console.log(spotifyend);
 
                 // calculates time elasped, takes current time and minus the starting time
                 exp_time = Math.floor(Date.now() / 1000)
@@ -55,9 +54,10 @@ async function init(data) {
                 var percentage = Math.round((sdiff / ediff) * 100);
 
 
-                var songinfo = [json.spotify['song'], json.spotify['artist'].split('; ').join(', '), formatTime(sdiff), formatTime(ediff)]
+                var songinfo = [json.spotify['song'], json.spotify['artist'].split('; ').join(', ')]
+                var songtime = [formatTime(sdiff), formatTime(ediff)]
                 div.innerHTML = ('<img draggable="false" alt="" width="64" height="64" src="' + json.spotify['album_art_url'] + '"> ' +
-                "<strong>" + element['name'] + "</strong>" + "<ul><li>" + songinfo.join("</li><li>") + "</li></ul>" +
+                "<strong>" + element['name'] + "</strong>" + '<ul id="songinfo"><li class="songinfoli">' + songinfo.join('</li><li class="songinfoli">') + '</li></ul>' +
                 // progress
                 '<div class="progressbar">' + '<div class="progress" style="width:' + percentage + '%;"></div>' + '</div>');
             } else {

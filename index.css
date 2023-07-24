@@ -193,9 +193,14 @@ footer::before {
     justify-content: center;
 }
 
-
 #activities {
     display: flex;
+    height: 140px;
+}
+
+.activity {
+    width: 400px;
+    height: 140px;
 }
 
 .act-icon {
