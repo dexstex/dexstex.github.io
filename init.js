@@ -1,5 +1,3 @@
-// values to change for the height of the activities rectangle
-// remember to update ul li for spotifystart/end
 var originalh = -0.2;
 var addedh = 5;
 
@@ -56,10 +54,10 @@ async function init(data) {
 
                 var songinfo = [json.spotify['song'], json.spotify['artist'].split('; ').join(', ')]
                 var songtime = [formatTime(sdiff), formatTime(ediff)]
-                div.innerHTML = ('<img draggable="false" alt="" width="64" height="64" src="' + json.spotify['album_art_url'] + '"> ' +
-                "<strong>" + element['name'] + "</strong>" + '<ul id="songinfo"><li class="songinfoli">' + songinfo.join('</li><li class="songinfoli">') + '</li></ul>' +
-                // progress
-                '<div class="progressbar">' + '<div class="progress" style="width:' + percentage + '%;"></div>' + '</div>');
+                div.innerHTML = ('<div id="sact-info"><img class="act-icon" draggable="false" alt="" width="88" height="88" src="' + json.spotify['album_art_url'] + '"> ' +
+                '<div id="sact-name"> <strong>' + element['name'] + "</strong>" + '<ul id="songinfo"><li class="songinfoli">' + songinfo.join('</li><li class="songinfoli">By ') +
+                '</li></ul></div></div><ul id="songtime"><li class="songtimeli">' +  songtime.join('</li><li class="songtimeli">') +
+                '</li></ul><div class="progressbar">' + '<div class="progress" style="width:' + percentage + '%;"></div>' + '</div>');
             } else {
                 // time elapsed timer
                 const current_time = element.timestamps['start'],
@@ -80,7 +78,7 @@ async function init(data) {
                     }
                     else {}
                 } else if(element.assets === undefined) {
-                    div.innerHTML = ('<img draggable="false" alt="" width="64" height="64" src="unknown.png"> <div class="other">' +
+                    div.innerHTML = ('<img draggable="false" alt="" width="88" height="88" src="unknown.png"> <div class="other">' +
                         "<ul><li>" + activityinfo.join("</li><li>") + "</li></ul>" + '</div>');
                 }
             }
@@ -147,15 +145,14 @@ async function updatepresence() {
                     var eminutes = Math.floor((ms / 1000 / 60) % 60);
                     return [eminutes, eseconds].map(v => String(v).padStart(2,0)).join(':');
                 }
-
                 var percentage = Math.round((sdiff / ediff) * 100);
 
-                var songinfo = [json.spotify['song'], json.spotify['artist'].split('; ').join(', '), formatTime(sdiff), formatTime(ediff)]
-                div.innerHTML = ('<img draggable="false" alt="" width="64" height="64" src="' + json.spotify['album_art_url'] + '"> ' +
-                "<strong>" + element['name'] + "</strong>" + "<ul><li>" + songinfo.join("</li><li>") + "</li></ul>" +
-                // progress
-                '<div class="progressbar">' + '<div class="progress" style="width:' + percentage + '%;"></div>' + '</div>'
-                );
+                var songinfo = [json.spotify['song'], json.spotify['artist'].split('; ').join(', ')]
+                var songtime = [formatTime(sdiff), formatTime(ediff)]
+                div.innerHTML = ('<div id="sact-info"><img class="act-icon" draggable="false" alt="" width="88" height="88" src="' + json.spotify['album_art_url'] + '"> ' +
+                '<div id="sact-name"> <strong>' + element['name'] + "</strong>" + '<ul id="songinfo"><li class="songinfoli">' + songinfo.join('</li><li class="songinfoli"> By ') +
+                '</li></ul></div></div><ul id="songtime"><li class="songtimeli">' +  songtime.join('</li><li class="songtimeli">') +
+                '</li></ul><div class="progressbar">' + '<div class="progress" style="width:' + percentage + '%;"></div>' + '</div>');
             } else {
                 // time elapsed timer
                 const current_time = element.timestamps['start'],
@@ -177,7 +174,7 @@ async function updatepresence() {
                     }
                     else {}
                 } else if(element.assets === undefined) {
-                    div.innerHTML = ('<img draggable="false" alt="" width="64" height="64" src="unknown.png"> <div class="other">' +
+                    div.innerHTML = ('<img draggable="false" alt="" width="88" height="88" src="unknown.png"> <div class="other">' +
                         "<ul><li>" + activityinfo.join("</li><li>") + "</li></ul>" + '</div>');
                 }
             }

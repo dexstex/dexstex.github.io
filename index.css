@@ -41,6 +41,7 @@ html, body {
 body {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizelegibility;
+    -webkit-text-size-adjust: none;
     text-size-adjust: none;
 }
 
@@ -171,7 +172,7 @@ footer::before {
 }
 
 #profile {
-    padding-right: 48px;
+    padding-right: 24px;
 }
 
 #userinfo img {
@@ -199,14 +200,77 @@ footer::before {
 }
 
 .activity {
-    width: 400px;
+    padding-left: 24px;
+    padding-right: 24px;
+    width: 390px;
     height: 140px;
+    display: flex;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.activity .other {
+    margin-left: 20px;
+}
+
+.other strong {
+    font-size: 1.3em;
+}
+
+.other li {
+    padding-top: 3px;
+    font-size: 1.1em;
+}
+
+#spotify {
+    display: block;
+}
+
+#sact-info {
+    display: flex;
+}
+
+#sact-name {
+    margin-left: 20px;
+}
+
+#sact-name strong {
+    font-size: 1.3em;
+    color: #58b68c;
+}
+
+.songinfoli {
+    padding-top: 3px;
+    font-size: 1.1rem;
+    padding-right: 16px;
+}
+
+#songtime {
+    padding-right: 24px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.progressbar {
+    margin-top: 8px;
+    margin-right: 24px;
+    height: 12px;
+    border-radius: var(--funnynumberpro);
+    background-color: #222;
+}
+
+.progress {
+    height: 100%;
+    border-radius: var(--funnynumberpro);
+    background-color: #999;
+    transition: width 0.2s;
 }
 
 .act-icon {
-    height: 64px;
-    width: 64px;
+    height: 88px;
+    width: 88px;
     aspect-ratio: 1 / 1 ;
+    border-radius: 16px;
 }
 
 /* Responsiveness */
