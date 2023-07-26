@@ -51,10 +51,8 @@ async function init(data) {
                 // calculates the percentage the song has elasped
                 var percentage = Math.round((sdiff / ediff) * 100);
 
-                const textamount = 30;
                 var songinfo = [json.spotify['song'], json.spotify['artist'].split('; ').join(', ')]
                 var songtime = [formatTime(sdiff), formatTime(ediff)]
-                if (json.spotify)
                 div.innerHTML = ('<div id="sact-info"><img class="act-icon" draggable="false" alt="" width="88" height="88" src="' + json.spotify['album_art_url'] + '"> ' +
                 '<div id="sact-name"> <strong>' + element['name'] + "</strong>" + '<ul id="songinfo"><li class="songinfoli">' + songinfo.join('</li><li class="songinfoli">By ') +
                 '</li></ul></div></div><ul id="songtime"><li class="songtimeli">' +  songtime.join('</li><li class="songtimeli">') +
