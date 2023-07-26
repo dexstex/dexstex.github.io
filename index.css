@@ -8,6 +8,11 @@
     --funnynumberpro : 69420px;
 }
 
+@keyframes marquee {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+  }
+
 .idle {
     border: 4px solid #faa61a;
 }
@@ -23,6 +28,7 @@
 .offline {
     border: 4px solid #747f8d;
 }
+
 
 ::selection {
     background:rgb(79, 82, 180);
@@ -242,6 +248,14 @@ footer::before {
     padding-top: 3px;
     font-size: 1.1rem;
     padding-right: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 240px;
+}
+
+.sact-marquee {
+    will-change: transform;
+    animation: marquee 15s linear infinite;
 }
 
 #songtime {
