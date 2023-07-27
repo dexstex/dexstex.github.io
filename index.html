@@ -16,6 +16,7 @@
 	<meta property="twitter:image" content="https://dexstex.github.io/media/meta.png" />
 	<link rel="stylesheet" href="index.css">
 	<link rel="stylesheet" href="home.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,200" />
 	<script src="init.js"></script>
 	<script src="lanyard.js"></script>
 	<meta charset="UTF-8">
@@ -64,11 +65,14 @@
 			</div>
 		</div>
 		<div id="content">
-			<div id="contentcards">
-
+			<div id="checkmybio">
+				Wanna check about me? <a class="special" href="/aboutme/">Sure thing! ;) </a>
 			</div>
-			<div id="contentmain">
-
+			<div class="checkmystatus">
+				Check out my discord status? Here ya go!
+				<span class="material-symbols-outlined">
+					expand_more
+					</span>
 			</div>
 		</div>
 	</section>
@@ -92,20 +96,20 @@
 	</footer>
 	<script>
 		// loop to constantly update the details of the activities even if no change was made (for example, time elapsed)
-		// var i = 1;
+		var i = 1;
 
-		// function loop() {
-		// 	setTimeout(function() {
-		// 		updatepresence();
+		function loop() {
+			setTimeout(function() {
+				updatepresence();
 				
-		// 		i++;
-		// 		if (i < 99999) {
-		// 			loop();
+				i++;
+				if (i < 99999) {
+					loop();
 
-		// 	}}, 500)
-		// }
+			}}, 500)
+		}
 
-		// loop();
+		loop();
 	</script>
 </body>
 </html>

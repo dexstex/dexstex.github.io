@@ -8,10 +8,6 @@
     --funnynumberpro : 69420px;
 }
 
-@keyframes marquee {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(-100%, 0); }
-  }
 
 .idle {
     border: 4px solid #faa61a;
@@ -65,8 +61,6 @@ a, a:link, a:visited {
     text-decoration: none;
     cursor: pointer;
 }
-
-/* Body */
 
 header {
     top: 0px;
@@ -214,17 +208,25 @@ footer::before {
     border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.activity#offline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #444;
+    font-size: 2rem;
+}
+
 .activity .other {
     margin-left: 20px;
 }
 
 .other strong {
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
 .other li {
     padding-top: 3px;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 #spotify {
@@ -240,13 +242,13 @@ footer::before {
 }
 
 #sact-name strong {
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: #58b68c;
 }
 
 .songinfoli {
     padding-top: 3px;
-    font-size: 1.1rem;
+    font-size: 1em;
     padding-right: 16px;
     white-space: nowrap;
     overflow: hidden;
