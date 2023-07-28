@@ -10,10 +10,11 @@
 
 #main {
     padding-top: var(--header-height);
-    min-height: 100vh;
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
+    height: calc(100vh - var(--header-height));
+    width: 100%;
+    display: grid;
+    grid-template-rows: 90% 10%;
+    justify-content: center;
 }
 
 #intro {
@@ -22,4 +23,47 @@
     padding-left: var(--page-padding-left);
     padding-right: var(--page-padding-right);
     background: radial-gradient(ellipse 80% 50% at 50% -20%,rgba(120,119,198,0.3),rgba(0, 0, 0, 0));
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#hibro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#diff-lang {
+    height: 3rem;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+#diff-lang::-webkit-scrollbar {
+    display: none;
+}
+
+.dl-items {
+    font-size: 2rem;
+    height: 45px;
+    scroll-snap-align: center;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#briish, #melei, #sewey {
+    font-size: 2.4rem;
+    margin-bottom: 2px;
+}
+
+#dexstex {
+    font-size: 2.4rem;
+    padding-left: 8px;
+}
+
+#introimg {
+    width: 400px;
 }

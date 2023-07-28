@@ -133,9 +133,9 @@ header {
 
 #main {
     padding-top: var(--header-height);
-    min-height: 100vh;
-    display: flex;
-    flex: 1 1 auto;
+    height: 100vh;
+    display: grid;
+    grid-auto-columns: 90% 10%;
     flex-direction: column;
 }
 
