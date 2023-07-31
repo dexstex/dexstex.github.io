@@ -8,7 +8,6 @@
     --funnynumberpro : 69420px;
 }
 
-
 .idle {
     border: 4px solid #faa61a;
 }
@@ -45,6 +44,7 @@ body {
     text-rendering: optimizelegibility;
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
+    overflow-x: hidden;
 }
 
 ul, ol, li, a, p, div, h1 ,h2 ,h3, h4, h5, h6, span, strong {
@@ -55,6 +55,8 @@ ul, ol, li, a, p, div, h1 ,h2 ,h3, h4, h5, h6, span, strong {
 ul {
     list-style-type: none;
 }
+
+
 
 a, a:link, a:visited {
     color: rgb(247, 248, 248);
@@ -70,7 +72,7 @@ header {
     display: flex;
     position: fixed;
     height: 48px;
-    width: 100%;
+    width: 100vw;
     z-index: 55;
     margin: 0;
 }
@@ -89,18 +91,20 @@ header {
     backdrop-filter: blur(12px);
 }
 
-#headcontent {
+#headcontent, #headul {
     display: flex;
     position: relative;
     -webkit-box-align: center;
     align-items: center;
-    padding-left: var(--page-padding-left);
     padding-right: var(--page-padding-right);
     max-width: var(--page-max-width);
     width: 100%;
     margin: 0 auto;
     height: 100%;
-    /* flex-direction: row; */
+}
+
+#headcontent {
+    padding-left: var(--page-padding-left);
 }
 
 #headcontent::after {
@@ -131,6 +135,16 @@ header {
     margin: 0;
 }
 
+#check {
+    display: none;
+}
+
+.checkbtn {
+    display: none;
+    cursor: pointer;
+}
+
+
 #main {
     padding-top: var(--header-height);
     height: 100vh;
@@ -148,6 +162,7 @@ footer {
     align-items: center;
     margin-bottom: 32px;
     color: rgb(247, 248, 248);
+    width: 100vw;
 }
 
 footer::before {
@@ -207,6 +222,7 @@ footer::before {
     height: 140px;
     display: flex;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
+    align-items: center;
 }
 
 .activity#offline {
@@ -290,5 +306,124 @@ footer::before {
     border-radius: 16px;
 }
 
+
+
 /* Responsiveness */
 
+@media screen and (max-width: 767px){
+    #headul {
+        position: absolute;
+        flex-direction: column;
+        width: calc(100vw - 96px);
+        top: 56px;
+        padding: 0;
+        margin: 0;
+    }
+
+    #headul li {
+        margin-top: 16px;
+    }
+
+    .headselect {
+        margin-left: 0;
+        font-size: 1rem;
+    }
+
+    #headcontent {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 12px;
+        box-sizing: border-box;
+        overflow-y: hidden;
+    }
+
+    .checkbtn {
+        display: flex;
+        justify-content: center;
+    }
+
+    #check:checked + header {
+        height: 60vh;
+        transition: all 1s;
+    }
+    
+    #check:not(:checked) + header {
+        height: 48px;
+        transition: all 1s;
+    }
+
+    .yourheadla::before ,.yourheadla::after {
+        -webkit-mask-image: linear-gradient(to bottom,black 66.66%,transparent);
+        mask-image: linear-gradient(to bottom,black 66.66%,transparent);
+    }
+
+    #intro {
+        flex-direction: column !important;
+    }
+
+
+    #introimg {
+        width: 350px !important;
+    }
+
+    .discord {
+        flex-direction: column;
+        padding-top: 16px;
+    }
+
+    #userinfo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    #activities {
+        flex-direction: column;
+        height: calc((140px + 16px) * 3);
+    }
+
+    .activity {
+        border-left: 0px solid;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-left: 8px;
+        padding-right: 0;
+    }
+
+    .activity#spotify {
+        padding-top: 16px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    #hibro {
+        justify-content: center;
+    }
+
+    #diff-lang {
+        display: none;
+    }
+
+    #whoami p {
+        margin-left: 8px !important;
+        margin-right: 8px !important;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:1367px) {  
+    .activity {
+        width: 290px;
+    }
+
+    .songinfoli {
+        padding-top: 3px;
+        font-size: 1em;
+        padding-right: 16px;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 140px;
+    }
+}
