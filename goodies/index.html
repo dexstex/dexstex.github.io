@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
 	<title>DeX | Goodies</title>
-	<meta name="title" content="DeX | Goodies" />
+	<meta name="title" content="DeX" />
 	<meta name="description" content="Pretty much my website. - Dexstex" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://dexstex.github.io" />
-	<meta property="og:title" content="DeX | Goodies" />
+	<meta property="og:title" content="DeX" />
 	<meta property="og:description" content="Pretty much my website. - Dexstex" />
 	<meta property="og:image" content="https://dexstex.github.io/media/meta.png" />
 	<meta property="twitter:card" content="summary_large_image" />
 	<meta property="twitter:url" content="https://dexstex.github.io" />
-	<meta property="twitter:title" content="DeX | Goodies" />
+	<meta property="twitter:title" content="DeX" />
 	<meta property="twitter:description" content="Pretty much my website. - Dexstex" />
 	<meta property="twitter:image" content="https://dexstex.github.io/media/meta.png" />
 	<link rel="stylesheet" href="/index.css">
-	<link rel="stylesheet" href="goodies.css">
+	<link rel="stylesheet" href="aboutme.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,200" />
 	<script src="/init.js"></script>
 	<script src="/lanyard.js"></script>
 	<meta charset="UTF-8">
@@ -23,17 +24,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body onload="onload()">
-	<header>
+	<input type="checkbox" id="check">
+	<header class="test">
 		<div class="yourheadla"></div>
-		<ul id="headcontent">
-			<li><a class="headselect no-headpat" href="/">DeX</a></li>
-			<li><a class="headselect" href="/goodies/">Goodies</a></li>
-			<li><a class="headselect" href="/aboutme/">About Me</a></li>
-			<li><a class="headselect" href="/socials/">Socials</a></li>
-			<li><a class="headselect" href="/credits/">Credits</a></li>
-			<li><a class="headselect" href="https://github.com/dexstex/dexstex.github.io">GitHub Repo</a></li>
-			<li><div class="night"></div></li>
-		</ul>
+		<div id="headcontent">
+			<a id="dex" href="/">DeX</a>
+			<ul id="headul">
+				<li><a class="special headselect" href="/aboutme/">About Me</a></li>
+				<li><a class="headselect" href="/goodies/">Goodies</a></li>
+				<li><a class="headselect" href="/socials/">Socials</a></li>
+				<li><a class="headselect" href="/credits/">Credits</a></li>
+				<li><a class="headselect" target="__blank" href="https://github.com/dexstex/dexstex.github.io">GitHub Repo</a></li>
+			</ul>
+
+			<label for="check" class="checkbtn">
+				<span class="material-symbols-outlined">menu</span>
+			</label>
+		</div>
 	</header>
 	<section id="main">
 		

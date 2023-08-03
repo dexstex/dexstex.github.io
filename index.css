@@ -75,6 +75,7 @@ header {
     width: 100vw;
     z-index: 55;
     margin: 0;
+    transition: all .5s;
 }
 
 .yourheadla::before ,.yourheadla::after {
@@ -117,6 +118,10 @@ header {
     right: 0px;
     height: 1px;
     background: rgba(255, 255, 255, 0.1);
+}
+
+.special {
+    margin-left: calc(2* 24px) !important;
 }
 
 .headselect {
@@ -310,7 +315,7 @@ footer::before {
 
 /* Responsiveness */
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 800px){
     #headul {
         position: absolute;
         flex-direction: column;
@@ -327,6 +332,10 @@ footer::before {
     .headselect {
         margin-left: 0;
         font-size: 1rem;
+    }
+
+    .special {
+        margin-left: 0 !important;
     }
 
     #headcontent {
@@ -382,7 +391,7 @@ footer::before {
 
     #activities {
         flex-direction: column;
-        height: calc((140px + 16px) * 3);
+        height: 100%;
     }
 
     .activity {
@@ -397,21 +406,6 @@ footer::before {
     }
 }
 
-@media screen and (max-width:400px) {
-    #hibro {
-        justify-content: center;
-    }
-
-    #diff-lang {
-        display: none;
-    }
-
-    #whoami p {
-        margin-left: 8px !important;
-        margin-right: 8px !important;
-        text-align: center;
-    }
-}
 
 @media screen and (max-width:1367px) {  
     .activity {
