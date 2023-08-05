@@ -16,13 +16,12 @@
 	<meta property="twitter:image" content="https://dexstex.github.io/media/meta.png" />
 	<link rel="stylesheet" href="/index.css">
 	<link rel="stylesheet" href="goodies.css">
-	<script src="/lanyard.js"></script>
-	<script src="/init.js"></script>
+	<script src="script.js" defer></script>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body onload="onload()">
+<body>
 	<input type="checkbox" id="check">
 	<header class="test">
 		<div class="yourheadla"></div>
@@ -42,41 +41,40 @@
 		</div>
 	</header>
 	<section id="main">
-		
-	</section>
-	<footer>
-		<div class="discord">
-			<div id="profile">
-				<div id="userinfo">
-					<img loading="lazy" id="avatar" draggable="false" alt="">
-					<div class="profilecontainer">
-						<p id="name"></p>
-						<div id="statuscontainer">
-							<div id="statusemoji"></div>
-							<p id="status"></p>
-						</div>
+		<div id="search">
+			<input type="text" name="searchbar" placeholder="Search" title="Search for an app" id="searchbar">
+		</div>
+		<div id="cards">
+			<div class="card">
+				<a href="http://">
+					<img src="" alt="">
+					<div class="cardtext">
+						<h3 class="cardtitle"></h3>
+						<p class="carddesc"></p>
 					</div>
-				</div>
-			</div>
-			<div id="activities">
+				</a>
 			</div>
 		</div>
+	</section>
+	<footer>
+
 	</footer>
 	<script>
-		var i = 1;
-
-		function loop() {
-			setTimeout(function() {
-				updatepresence();
-				
-				i++;
-				if (i < 99999) {
-					loop();
-
-			}}, 500)
+		function search() {
+		var input, filter, ul, li, a, i;
+		input = document.getElementById("mySearch");
+		filter = input.value.toUpperCase();
+		ul = document.getElementById("myMenu");
+		li = ul.getElementsByTagName("li");
+		for (i = 0; i < li.length; i++) {
+			a = li[i].getElementsByTagName("a")[0];
+			if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+			li[i].style.display = "";
+			} else {
+			li[i].style.display = "none";
+			}
 		}
-
-		loop();
+		}
 	</script>
 </body>
 </html>

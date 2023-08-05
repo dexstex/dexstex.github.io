@@ -96,3 +96,9 @@
         width: 350px !important;
     }
 }
+
+@media screen and (max-width: 1367px) {
+    #introimg {
+        width: 350px !important;
+    }
+}

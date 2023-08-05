@@ -1,0 +1,12 @@
+:root {
+    --header-height : 48px;
+    --page-padding-left : max(env(safe-area-inset-left), 48px);
+    --page-padding-right : max(env(safe-area-inset-right), 48px);
+    --page-max-width : 1200px;
+}
+
+#main {
+    padding-top: var(--header-height);
+    height: calc(100vh - var(--header-height));
+    width: 100%;
+}
