@@ -3,7 +3,6 @@
         "name": "PowerToys",
         "desc": "Set of system utilities",
         "link": "https://learn.microsoft.com/en-us/windows/powertoys/install",
-        "img": "/media/goodies/powertoys.webp",
         "tags": [
             "windows",
             "free",
@@ -15,7 +14,6 @@
         "name": "Visual Studio Code",
         "desc": "Source code editor",
         "link": "https://code.visualstudio.com/Download",
-        "img": "/media/goodies/vscode.webp",
         "tags": [
             "windows",
             "free",
@@ -26,7 +24,6 @@
         "name": "Bloxstrap",
         "desc": "Open-source Roblox bootstrapper on crack",
         "link": "https://github.com/pizzaboxer/bloxstrap",
-        "img": "/media/goodies/bloxstrap.webp",
         "tags": [
             "windows",
             "free",
@@ -37,7 +34,6 @@
         "name": "Vencord",
         "desc": "The cutest Discord client mod !This break ToS!",
         "link": "https://vencord.dev/",
-        "img": "/media/goodies/vencord.webp",
         "tags": [
             "windows",
             "mac",
@@ -49,7 +45,6 @@
         "name": "Aliucord",
         "desc": "Discord modification for Android !This break ToS!",
         "link": "https://github.com/Aliucord/Aliucord",
-        "img": "/media/goodies/aliucord.webp",
         "tags": [
             "android",
             "free",
@@ -60,7 +55,6 @@
         "name": "Micro Gesture",
         "desc": "Motion gesture app that improves the operating experience of big phones",
         "link": "https://play.google.com/store/apps/details?id=me.i38.gesture",
-        "img": "/media/goodies/mgesture.webp",
         "tags": [
             "android",
             "trial",
@@ -71,9 +65,8 @@
         "name": "1.1.1.1 with WARP",
         "desc": "The free app that makes your Internet safer",
         "link": "https://1.1.1.1",
-        "img": "/media/goodies/mgesture.webp",
         "tags": [
-            "all platforms",
+            "allplat",
             "free",
             "network",
             "addon"
@@ -83,9 +76,8 @@
         "name": "ChatGPT",
         "desc": "Chatbot developed by OpenAI",
         "link": "https://chat.openai.com",
-        "img": "/media/goodies/chatgpt.webp",
         "tags": [
-            "all platforms",
+            "allplat",
             "free",
             "apps"
         ]
@@ -94,7 +86,6 @@
         "name": "HWiNFO",
         "desc": "Professional System Information and Diagnostics",
         "link": "https://www.hwinfo.com/download/",
-        "img": "/media/goodies/hwinfo.webp",
         "tags": [
             "windows",
             "free",
@@ -105,7 +96,6 @@
         "name": "Mem Reduct",
         "desc": "Lightweight real-time memory management application",
         "link": "https://github.com/henrypp/memreduct",
-        "img": "/media/goodies/mreduct.webp",
         "tags": [
             "windows",
             "free",
@@ -117,11 +107,32 @@
         "name": "O&O ShutUp 10++",
         "desc": "Free antispy tool for Windows 10 and 11",
         "link": "https://www.oo-software.com/en/shutup10",
-        "img": "/media/goodies/oosu.webp",
         "tags": [
             "windows",
             "free",
             "modification"
+        ]
+    },
+    {
+        "name": "uBlock Origin",
+        "desc": "Free, open-source ad content blocker",
+        "link": "https://ublockorigin.com/",
+        "tags": [
+            "browser",
+            "free",
+            "network",
+            "addon"
+        ]
+    },
+    {
+        "name": "Free Download Manager",
+        "desc": "Literally free download manager",
+        "link": "https://www.freedownloadmanager.org/",
+        "tags": [
+            "allplat",
+            "free",
+            "network",
+            "apps"
         ]
     }
 ]
