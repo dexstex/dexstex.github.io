@@ -123,5 +123,42 @@
             "free",
             "modification"
         ]
+    },
+    {
+        "name": "uBlock Origin",
+        "desc": "Free, open-source ad content blocker",
+        "link": "https://ublockorigin.com/",
+        "img": "/media/goodies/ublock.webp",
+        "tags": [
+            "browser",
+            "free",
+            "network",
+            "addon"
+        ]
+    },
+    {
+        "name": "Free Download Manager",
+        "desc": "Literally free download manager",
+        "link": "https://www.freedownloadmanager.org/",
+        "img": "/media/goodies/fdm.webp",
+        "tags": [
+            "allplat",
+            "free",
+            "network",
+            "apps"
+        ]
+    },
+    {
+        "name": "ThrottleStop",
+        "desc": "Monitors for and correct the three main types of CPU throttling",
+        "link": "https://www.techpowerup.com/download/techpowerup-throttlestop/",
+        "img": "/media/goodies/tstop.webp",
+        "tags": [
+            "windows",
+            "free",
+            "performance",
+            "modification",
+            "diagnostics"
+        ]
     }
 ]
