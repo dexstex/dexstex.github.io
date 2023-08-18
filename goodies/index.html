@@ -23,7 +23,7 @@
 </head>
 <body>
 	<input type="checkbox" id="check">
-	<header class="test">
+	<header>
 		<div class="yourheadla"></div>
 		<div id="headcontent">
 			<a id="dex" href="/">DeX</a>
@@ -42,39 +42,57 @@
 	</header>
 	<section id="main">
 		<div id="search">
-			<input type="text" name="searchbar" placeholder="Search" title="Search for an app" id="searchbar">
-		</div>
-		<div id="cards">
-			<div class="card">
-				<a href="http://">
-					<img src="" alt="">
-					<div class="cardtext">
-						<h3 class="cardtitle"></h3>
-						<p class="carddesc"></p>
-					</div>
-				</a>
+			<div class="spillc" id="plat">
+				<h3>App Platforms</h3>
+				<button type="button" class="spill" onclick="filterSelection('allplat')" id="allplat">All Platform</button>
+				<button type="button" class="spill" onclick="filterSelection('android')" id="android">Android</button>
+				<button type="button" class="spill" onclick="filterSelection('mac')" id="mac">MacOS</button>
+				<button type="button" class="spill" onclick="filterSelection('windows')" id="windows">Windows</button>
 			</div>
+			<div class="spillc" id="price">
+				<h3>App Prices</h3>
+				<button type="button" class="spill" onclick="filterSelection('free')" id="free">Free</button>
+				<button type="button" class="spill" onclick="filterSelection('paid')" id="paid">Paid</button>
+				<button type="button" class="spill" onclick="filterSelection('trial')" id="trial">Trial</button>
+			</div>
+			<div class="spillc" id="type">
+				<h3>App Types</h3>
+				<button type="button" class="spill" onclick="filterSelection('modification')" id="mod">Modification</button>
+				<button type="button" class="spill" onclick="filterSelection('customization')" id="cust">Customization</button>
+				<button type="button" class="spill" onclick="filterSelection('addon')" id="add">Addons</button>
+				<button type="button" class="spill" onclick="filterSelection('diagnostics')" id="diag">Diagnostics</button>
+				<button type="button" class="spill" onclick="filterSelection('apps')" id="app">Apps</button>
+			</div>
+			<div class="spillc" id="xtra">
+				<h3>Extra Tags</h3>
+				<button type="button" class="spill" onclick="filterSelection('performance')" id="perf">Performance</button>
+				<button type="button" class="spill" onclick="filterSelection('network')" id="net">Network</button>
+				<button type="button" class="spill" onclick="filterSelection('gaming')" id="game">Gaming</button>
+			</div>
+
 		</div>
+		<div id="cards" card-contain>
+		</div>
+		<template card-template>
+			<div class="card">
+				<div class="face face1">
+				  <div class="content">
+					 <img class="cpic" src="" alt="" card-img>
+					<h3 app-name></h3>
+				  </div>
+				</div>
+				<div class="face face2">
+				  <div class="content">
+					<p app-desc></p>
+					<div class="pills" app-tag></div>
+					<a href="" type="button" app-dl>Download</a>
+				  </div>
+				</div>
+			 </div>
+		</template>
 	</section>
 	<footer>
 
 	</footer>
-	<script>
-		function search() {
-		var input, filter, ul, li, a, i;
-		input = document.getElementById("mySearch");
-		filter = input.value.toUpperCase();
-		ul = document.getElementById("myMenu");
-		li = ul.getElementsByTagName("li");
-		for (i = 0; i < li.length; i++) {
-			a = li[i].getElementsByTagName("a")[0];
-			if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-			li[i].style.display = "";
-			} else {
-			li[i].style.display = "none";
-			}
-		}
-		}
-	</script>
 </body>
 </html>

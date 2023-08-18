@@ -30,7 +30,8 @@
         "tags": [
             "windows",
             "free",
-            "gaming"
+            "gaming",
+            "modification"
         ]
     },
     {
@@ -73,7 +74,7 @@
         "link": "https://1.1.1.1",
         "img": "/media/goodies/mgesture.webp",
         "tags": [
-            "all platforms",
+            "allplat",
             "free",
             "network",
             "addon"
@@ -85,7 +86,7 @@
         "link": "https://chat.openai.com",
         "img": "/media/goodies/chatgpt.webp",
         "tags": [
-            "all platforms",
+            "allplat",
             "free",
             "apps"
         ]
