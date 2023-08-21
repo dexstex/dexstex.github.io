@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>DeX | About Me</title>
 	<meta name="title" content="DeX" />
@@ -20,6 +21,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body onload="onload()">
 	<input type="checkbox" id="check">
 	<header class="test">
@@ -31,50 +33,44 @@
 				<li><a class="headselect" href="/goodies/">Goodies</a></li>
 				<li><a class="headselect" href="/socials/">Socials</a></li>
 				<li><a class="headselect" href="/credits/">Credits</a></li>
-				<li><a class="headselect" target="__blank" href="https://github.com/dexstex/dexstex.github.io">GitHub Repo</a></li>
+				<li><a class="headselect" target="__blank" href="https://github.com/dexstex/dexstex.github.io">GitHub
+						Repo</a></li>
 			</ul>
 
 			<label for="check" class="checkbtn">
-				<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg>
+				<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+					<path d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+				</svg>
 			</label>
 		</div>
 	</header>
 	<section id="main">
-		
+		<div id="start"></div>
+		<div id="skills"></div>
+		<div id="games"></div>
+		<div id="devices"></div>
+
 	</section>
 	<footer>
-		<div class="discord">
-			<div id="profile">
-				<div id="userinfo">
-					<img loading="lazy" id="avatar" draggable="false" alt="">
-					<div class="profilecontainer">
-						<p id="name"></p>
-						<div id="statuscontainer">
-							<div id="statusemoji"></div>
-							<p id="status"></p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="activities">
-			</div>
-		</div>
+
 	</footer>
 	<script>
 		var i = 1;
 
 		function loop() {
-			setTimeout(function() {
+			setTimeout(function () {
 				updatepresence();
-				
+
 				i++;
 				if (i < 99999) {
 					loop();
 
-			}}, 500)
+				}
+			}, 500)
 		}
 
 		loop();
 	</script>
 </body>
+
 </html>
