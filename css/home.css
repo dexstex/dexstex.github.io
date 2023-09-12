@@ -3,6 +3,7 @@
   --header-height: 48px;
   --page-padding-left: max(env(safe-area-inset-left), 48px);
   --page-padding-right: max(env(safe-area-inset-right), 48px);
+  --funnynumberpro: 69420px;
   --page-max-width: 1200px;
 }
 
@@ -75,9 +76,13 @@
   font-stretch: -2%;
 }
 
+#whoami {
+  margin-left: 16px;
+}
+
 #whoami p {
-  text-align: center;
   margin-top: 4px;
+  margin-bottom: 8px;
 }
 
 #istatus {
@@ -88,6 +93,8 @@
 #istatusdot {
   width: 18.75px;
   aspect-ratio: 1/1;
+  border-radius: var(--funnynumberpro);
+  margin-right: .2rem;
 }
 
 #introimg {
