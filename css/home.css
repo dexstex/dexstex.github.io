@@ -37,7 +37,6 @@
 
 #main {
   padding-top: var(--header-height);
-  height: calc(100vh - var(--header-height));
   width: 100%;
   display: grid;
   grid-template-rows: 90% 10%;
@@ -49,9 +48,11 @@
   );
   opacity: 0;
   animation: 1s ease-out 0s 1 forwards fadein;
+  /* overflow-y: hidden; */
 }
 
 #intro {
+  height: calc(100vh - var(--header-height));
   margin-top: calc(-1 * var(--header-height));
   padding-top: var(--header-height);
   padding-left: var(--page-padding-left);
@@ -105,6 +106,15 @@
 #content {
   display: flex;
   align-content: flex-end;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid white;
+}
+
+td, th {
+  border: 1px solid white;
 }
 
 @media screen and (max-width: 800px) {
